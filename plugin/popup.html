@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AntiCaptcha solver Options</title>
+    <meta name="description" content="AntiCaptcha solver Options" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/popup.css" />
+</head>
+<body>
+    <div id="app" class="main-wrap">
+        <div class="header">
+            <img src="/img/anticaptcha-logo/anti.png" data-message-alt="anticaptchaLogoAlt" width="78" height="25" />
+
+            <label for="enable_checkbox" class="toggler-wrap" tabindex="0" data-message-title="enablePluginTitle">
+                <input id="enable_checkbox" name="enable" type="checkbox" v-model="globalStatus.enable" data-message-title="enablePluginTitle" />
+                <span class="toggler" data-message="enablePlugin"></span>
+            </label>
+            <div class="status-message" v-if="statusMessage">
+                {{ statusMessage }}
+            </div>
+
+            <div class="side-status">
+                <div class="status-free-attempts" v-if="freeAttemptsMessage && !balanceMessage" v-html="freeAttemptsMessage"></div>
+                <div class="status-balance color-good" v-if="balanceMessage">
+                    <span class="battery"><span class="fill" :style="{ height: lowBalance ? '30%' : '100%'}"></span></span>
+                    <span class="balance" data-message-title="balanceTitle">{{ balanceMessage }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="new-version-message" v-if="newVersionMessage" v-html="newVersionMessage" data-message-title="newVersionMessageTitle">
+            <!-- New version 0.1802 of <a target="_blank" href="" title="Download new version of the AntiCaptcha extension">the plug-in available for downloading</a>.
+            What's new: Bug fixes -->
+        </div>
+        <div class="tabs" role="tablist">
+            <tab
+                    name="main"
+                    v-model="currentTab"
+                    label="mainTabButtonTitle"
+                    title="mainTabButton"
+            >
+                 <!-- Main -->
+            </tab>
+
+            <tab
+                    name="whatsolve"
+                    v-model="currentTab"
+                    label="whatSolveTabButtonTitle"
+                    title="whatSolveButton"
+            >
+                <!-- What to solve -->
+            </tab>
+
+            <tab
+                    name="recaptcha-advanced"
+                    v-model="currentTab"
+                    label="recaptchaTabButtonTitle"
+                    title="recaptchaTabButton"
+            >
+                 <!-- Recaptcha advanced -->
+            </tab>
+
+            <tab
+                    name="advanced"
+                    v-model="currentTab"
+                    label="advancedTabButtonTitle"
+                    title="advancedButton"
+            >
+                 <!-- Advanced -->
+            </tab>
+        </div>
+        <div class="main-content">
+            <div class="anti-key" v-show="currentTab === 'main'" id="main-panel">
+                <label class="title" for="account_key">
+                    <img src="/img/coss/icon-key.svg" data-message-alt="iconLockAlt">
+                    <span class="title-text" data-message="accountKeyTitle">
+                        <!-- Enter your <a href="https://anti-captcha.com/" target="_blank" title="Anti Captcha:
+                        automated captcha solving service.">Anti-Captcha.com</a> account key. -->
+                    </span>
+                </label>
+                <div class="input-wrap">
+                    <form class="key-input-wrap" @submit="applyApiKey" autocomplete="off">
+                        <input
+                                id="account_key"
+                                type="text"
+                                name="account_key"
+                                data-message-title="accountKeyTitleTitle"
+                                data-message-placeholder="accountKeyTitlePlaceholder"
+                                v-model="accountKey"
+                                :disabled="!globalStatus.enable"
+                        />
+                        <input
+                                type="submit"
+                                @click="applyApiKey"
+                                class="btn btn-primary"
+                                data-message-value="saveButtonValue"
+                                data-message-title="saveButtonTitle"
+                                :disabled="!globalStatus.enable"
+                        >
+                            <!-- Save -->
+                        </input>
+                    </form>
+                    <div class="input-error" v-if="errorMessage">{{ errorMessage }}</div>
+                </div>
+                <div class="why-key" :class="{ active: whyKeyBlockShow }">
+                    <div class="title" @click="whyKeyToggle" @keypress="enterPressReaction($event, whyKeyToggle)" data-message="noAccountKey" data-message-title="noAccountKeyTitle" tabindex="0">
+                        <!--No key?-->
+                    </div>
+                    <div class="desc">
+                        <div
+                                class="close"
+                                @click="whyKeyToggle"
+                                @keypress="enterPressReaction($event, whyKeyToggle)"
+                                tabindex="0"
+                                data-message-title="noAccountKeyCloseTitle"
+                        >&times;</div>
+                        <span data-message="noAccountKeyInfo">
+                            <!--
+                            This plugin requires a special key to get the job done.
+                            <br />
+                            You need to register on <a href="https://anti-captcha.com/" target="_blank" title="Anti Captcha:
+                             automated captcha solving service.">Anti-Captcha.com</a>.
+                            <br />
+                            Then add funds and place here the key you can find in
+                            <a href="https://anti-captcha.com/clients/settings/apisetup" target="_blank"
+                            title="Goto API setup section of anti-captcha.com">"Settings" -> "API setup" section of the website</a>.
+                            -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="options-list" v-show="currentTab === 'main'">
+                <checkbox
+                        v-model="globalStatus.auto_submit_form"
+                        name="auto_submit_form"
+                        label="autoSubmitFormTitle"
+                        title="autoSubmitForm"
+                        info="autoSubmitFormInfo"
+                        :disabled="!globalStatus.enable"
+                >
+                    <!-- Auto submit FORM after solving -->
+                    <!--
+                    This functional may work incorrect on certain websites.<br />
+                    Uncheck it if a webpage reloads after solving.</label>
+                    -->
+                </checkbox>
+
+                <checkbox
+                        v-model="globalStatus.play_sounds"
+                        name="play_sounds"
+                        label="playSoundsTitle"
+                        title="playSounds"
+                        info="playSoundsInfo"
+                        :disabled="!globalStatus.enable"
+                >
+                    <!--Play sounds-->
+                    <!--The Plugin plays sound when CAPTCHA found, while solving process
+                    and in case of success or error.-->
+                </checkbox>
+
+                <where-solve
+                        :where_solve_list="globalStatus.where_solve_list"
+                        :where_solve_white_list_type="globalStatus.where_solve_white_list_type"
+                        @set-where-solve-list-type="setWhereSolveListType($event)"
+                        @set-where-solve-list="setWhereSolveList($event)"
+                        :disabled="!globalStatus.enable"
+                ></where-solve>
+            </div>
+
+            <div class="options-list" v-show="currentTab === 'whatsolve'" id="whatsolve-panel">
+                <checkbox
+                        v-model="globalStatus.solve_recaptcha2"
+                        name="solve_recaptcha2"
+                        label="solveRecaptcha2Title"
+                        title="solveRecaptcha2"
+                        info="solveRecaptcha2Info"
+                        :disabled="!globalStatus.enable"
+                >
+                    <!--Solve reCAPTCHA 2-->
+                    <!--You may turn off this option if you don't need reCAPTCHA 2 being solved. Regular image CAPTCHA will work as usual.-->
+                </checkbox>
+
+                <checkbox
+                        v-model="globalStatus.solve_invisible_recaptcha"
+                        name="solve_invisible_recaptcha"
+                        label="solveInvisibleRecaptcha2Title"
+                        title="solveInvisibleRecaptcha2"
+                        info="solveInvisibleRecaptcha2Info"
+                        :disabled="!globalStatus.enable"
+                >
+                    <!-- Solve an invisibile reCAPTCHA automatically -->
+                    <!-- Solve a reCAPTCHA that looks like a small badge that's usually in a right bottom corner of the web page. -->
+                </checkbox>
+
+                <checkbox
+                        v-model="globalStatus.solve_recaptcha3"
+                        name="solve_recaptcha3"
+                        label="solveRecaptcha3Title"
+                        title="solveRecaptcha3"
+                        info="solveRecaptcha3Info"
+                        class="solve_recaptcha3"
+                        :disabled="!globalStatus.enable"
+                >
+                    <!-- Solve reCAPTCHA 3 -->
+                    <!-- Turn off this option if you don't want to solve new reCAPTCHA 3. -->
+                </checkbox>
+                <recaptcha3-score
+                        v-model="globalStatus.recaptcha3_score"
+                        :disabled="!globalStatus.solve_recaptcha3 || !globalStatus.enable"
+                ></recaptcha3-score>
+
+                <checkbox
+                        v-model="globalStatus.solve_funcaptcha"
+                        name="solve_funcaptcha"
+                        label="solveFuncaptchaTitle"
+                        title="solveFuncaptcha"
+                        info="solveFuncaptchaInfo"
+                        :disabled="!globalStatus.enable"
+                >
+                    <!-- Solve Funcaptcha automatically -->
+                    <!-- Turn off if you want Funcaptcha automatically solving. -->
+                </checkbox>
+
+                <checkbox
+                        v-model="globalStatus.solve_geetest"
+                        name="solve_geetest"
+                        label="solveGeetestTitle"
+                        title="solveGeetest"
+                        info="solveGeetestInfo"
+                        :disabled="!globalStatus.enable"
+                >
+                    <!-- Solve Geetest automatically -->
+                    <!-- Turn off if you want Geetest automatically solving. -->
+                </checkbox>
+
+                <checkbox
+                        v-model="globalStatus.solve_hcaptcha"
+                        name="solve_hcaptcha"
+                        label="solveHcaptchaTitle"
+                        title="solveHcaptcha"
+                        info="solveHcaptchaInfo"
+                        :disabled="!globalStatus.enable"
+                >
+                </checkbox>
+
+                <checkbox
+                        v-model="globalStatus.use_predefined_image_captcha_marks"
+                        name="use_predefined_image_captcha_marks"
+                        label="usePredefinedImageCaptchaMarksTitle"
+                        title="usePredefinedImageCaptchaMarks"
+                        info="usePredefinedImageCaptchaMarksInfo"
+                        :disabled="!globalStatus.enable"
+                >
+                    <!--Use predefined regular image CAPTCHA marks-->
+                    <!-- Regular image CAPTCHA will be automatically found, marked and solved on every page. It's based on selection of other users. Disable if you want to mark image CAPTCHAs on your own. -->
+                </checkbox>
+            </div>
+
+            <div class="options-list" v-show="currentTab === 'recaptcha-advanced'" id="recaptcha-advanced-panel">
+                <fieldset :disabled="!globalStatus.enable">
+                    <legend data-message="recaptchaPrecachingLegend">Recaptcha precaching</legend>
+                    <checkbox
+                            v-model="globalStatus.use_recaptcha_precaching"
+                            name="use_recaptcha_precaching"
+                            label="useRecaptchaPrecachingTitle"
+                            title="useRecaptchaPrecaching"
+                            info="useRecaptchaPrecachingInfo"
+                    >
+                        <!-- Use Recaptcha precaching -->
+                        <!-- New feature allows you to reduce Recaptcha solving time twice or even more, depending on your usage regime. <br />
+                        More info on a debug page here: <a href="" target="_blank" id="recaptcha_precache_debug_link">Recaptcha precache information</a>. -->
+                    </checkbox>
+                    <precaching
+                            :min_val="globalStatus.k_precached_solution_count_min"
+                            :max_val="globalStatus.k_precached_solution_count_max"
+                            @set-min="setPrecacheKMin($event)"
+                            @set-max="setPrecacheKMax($event)"
+                            :disabled="!globalStatus.use_recaptcha_precaching"
+                    ></precaching>
+                </fieldset>
+
+                <checkbox
+                        v-model="globalStatus.dont_reuse_recaptcha_solution"
+                        name="dont_reuse_recaptcha_solution"
+                        label="dontReuseRecaptchaSolutionTitle"
+                        title="dontReuseRecaptchaSolution"
+                        info="dontReuseRecaptchaSolutionInfo"
+                        :disabled="!globalStatus.enable"
+                >
+                    <!-- Do not reuse previous recaptcha solution on the same web-page -->
+                    <!-- A new recaptcha solving process will start for a newly appeared recaptcha box even if there is another reCAPTCHA 2 recently solved (and not yet expired) on this web-page. If off then new solving process will start only after previous solution (on the same web-page) expires. -->
+                </checkbox>
+
+                <checkbox
+                        v-model="globalStatus.start_recaptcha2_solving_when_challenge_shown"
+                        name="start_recaptcha2_solving_when_challenge_shown"
+                        label="startRecaptcha2SolvingWhenChallengeShownTitle"
+                        title="startRecaptcha2SolvingWhenChallengeShown"
+                        info="startRecaptcha2SolvingWhenChallengeShownInfo"
+                        :disabled="!globalStatus.enable"
+                >
+                    <!-- Start reCAPTCHA 2 solving only when a challenge box is shown -->
+                    <!-- A solving process will start only when a reCAPTCHA challenge box with images and stuff is shown. Useful for invisible reCAPTCHA 2: gonna save you some money and will prevent unnecessary callbacks. -->
+                </checkbox>
+
+                <checkbox
+                        v-model="globalStatus.solve_only_presented_recaptcha2"
+                        name="solve_only_presented_recaptcha2"
+                        label="solveOnlyPresentedRecaptcha2Title"
+                        title="solveOnlyPresentedRecaptcha2"
+                        info="solveOnlyPresentedRecaptcha2Info"
+                        :disabled="!globalStatus.enable"
+                >
+                    <!-- Solve only presented on a web-page reCAPTCHA 2 -->
+                    <!-- Differs from the previous option that if it's ON it will only solve a reCAPTCHA 2 that is actually presented on a web-page. reCAPTCHA 2 in an invisible or hidden container won't be solved. -->
+                </checkbox>
+            </div>
+
+            <div class="options-list" v-show="currentTab === 'advanced'" id="advanced">
+                <fieldset :disabled="!globalStatus.enable">
+                    <legend data-message="proxyOnTasksLegend">Proxy for ProxyOn tasks</legend>
+                    <checkbox
+                            v-model="globalStatus.solve_proxy_on_tasks"
+                            name="solve_proxy_on_tasks"
+                            label="proxyOnTasksTitle"
+                            title="proxyOnTasks"
+                            info="proxyOnTasksInfo"
+                            class="solve_proxy_on_tasks"
+                            :additional_action="quickAddProxy ? translate('proxyOnTasksNormalView') : translate('proxyOnTasksQuickAdd')"
+                            :additional_action_title="translate('proxyOnTasksQuickAddSwitchTitle')"
+                            :additional_action_callback="quickAddProxySwitch"
+                    >
+                        <!-- Make all the tasks ProxyOn -->
+                        <!-- All the captcha tasks (except regular image captchas) will be solved through the proxy... -->
+                    </checkbox>
+
+                    <div v-if="quickAddProxy">
+                        <div class="user_proxy_quick_add_subcontainer">
+                            <input
+                                    v-model="quickAddProxyInput"
+                                    type="text"
+                                    placeholder="https://user:pass@host_ip:port"
+                                    data-message-title="proxyOnTasksQuickAddInputTitle"
+                            />
+                            <button
+                                    class="btn-primary"
+                                    @click="quickAddProxyGo"
+                                    @keypress="enterPressReaction($event, quickAddProxyGo.bind(this))"
+                                    data-message-title="proxyOnTasksQuickAddButtonTitle"
+                            >Go</button>
+                        </div>
+                    </div>
+                    <div v-if="!quickAddProxy">
+                        <div style="margin-bottom: 5px">
+                            <select
+                                    style="width: 100px;"
+                                    v-model="globalStatus.user_proxy_protocol"
+                                    :disabled="!globalStatus.solve_proxy_on_tasks"
+                                    data-message-title="proxyOnTasksProtocolTitle"
+                            >
+                                <option
+                                        v-for="protocol in user_proxy_protocolOptions"
+                                        :value="protocol"
+                                >
+                                    {{ protocol }}
+                                </option>
+                            </select>
+                            <input
+                                    type="text"
+                                    style="width: 200px;"
+                                    placeholder="Server"
+                                    v-model="globalStatus.user_proxy_server"
+                                    :disabled="!globalStatus.solve_proxy_on_tasks"
+                                    data-message-title="proxyOnTasksServerTitle"
+                            />
+                            <input
+                                    type="text"
+                                    style="width: 110px;"
+                                    placeholder="Port"
+                                    v-model="globalStatus.user_proxy_port"
+                                    :disabled="!globalStatus.solve_proxy_on_tasks"
+                                    data-message-title="proxyOnTasksPortTitle"
+                            />
+                        </div>
+                        <input
+                                type="text"
+                                style="width: 150px;"
+                                placeholder="Login"
+                                v-model="globalStatus.user_proxy_login"
+                                :disabled="!globalStatus.solve_proxy_on_tasks"
+                                data-message-title="proxyOnTasksLoginTitle"
+                        />
+                        <input
+                                type="password"
+                                style="width: 150px;"
+                                placeholder="Password"
+                                v-model="globalStatus.user_proxy_password"
+                                :disabled="!globalStatus.solve_proxy_on_tasks"
+                                data-message-title="proxyOnTasksPasswordTitle"
+                        />
+                    </div>
+                </fieldset>
+
+                <checkbox
+                        v-model="globalStatus.set_incoming_workers_user_agent"
+                        name="set_incoming_workers_user_agent"
+                        label="setIncomingWorkersUserAgentTitle"
+                        title="setIncomingWorkersUserAgent"
+                        info="setIncomingWorkersUserAgentInfo"
+                        :disabled="!globalStatus.enable"
+                >
+                    <!-- Set incoming worker's User-Agent -->
+                    <!--
+                    For certain types of captchas (hCaptcha e.g.) with a solution itself we also got a User-Agent of the worker.
+                    If option is ON then we replace your browser's User-Agent with that value for a short period of time (110 sec) and for a current tab only.
+                    So your browser matches the browser where captcha was initially solved.
+                    This improves successful captcha solving ratio.
+                    -->
+                </checkbox>
+
+                <checkbox
+                        v-model="globalStatus.run_explicit_invisible_hcaptcha_callback_when_challenge_shown"
+                        name="run_explicit_invisible_hcaptcha_callback_when_challenge_shown"
+                        label="runExplicitInvisibleHcaptchaCallbackWhenChallengeShownTitle"
+                        title="runExplicitInvisibleHcaptchaCallbackWhenChallengeShown"
+                        info="runExplicitInvisibleHcaptchaCallbackWhenChallengeShownInfo"
+                        :disabled="!globalStatus.enable"
+                >
+                    <!-- Run explicit invisible Hcaptcha callback only when the challenge is shown -->
+                    <!--
+                    An invisible Hcaptcha (which is called explicitly with render and execute methods) will be considered
+                    as solved only when the corresponding button is pressed or Hcaptcha execute method called.
+                    In this case the challenge box is shown and then the target website callback executed.
+                    <br />
+                    <span class="important">
+                      It's a new behavior for plugin. So if you are facing some issues with Invisible Hcaptcha, try to disable this checkbox.
+                    </span>
+                    -->
+                </checkbox>
+
+                <checkbox
+                        v-model="globalStatus.delay_onready_callback"
+                        name="delay_onready_callback"
+                        label="delayOnreadyCallbackTitle"
+                        title="delayOnreadyCallback"
+                        info="delayOnreadyCallbackInfo"
+                        :disabled="!globalStatus.enable"
+                >
+                    <!-- Delay onReady callback -->
+                    <!-- Useful for cases when target website gives only a small time gap to solve captcha, i.e. on rollercoin.com.
+                    If this checkbox is on then captcha being solved before target website knows that it was initiated, so its timer do not start.
+                    Works only for Geetest captcha at the moment.
+                    -->
+                </checkbox>
+
+                <checkbox
+                        v-model="globalStatus.reenable_contextmenu"
+                        name="reenable_contextmenu"
+                        label="reenableContextmenuTitle"
+                        title="reenableContextmenu"
+                        info="reenableContextmenuInfo"
+                        :disabled="!globalStatus.enable"
+                >
+                    <!-- Check if website disables context menu and you can't mark image and input as CAPTCHA. -->
+                </checkbox>
+            </div>
+        </div>
+        <div class="footer" v-if="currentTab === 'main'">
+            <a href="https://anti-captcha.com/clients/help/tickets/list/all"
+               data-message-link="anticaptchaHelpLink"
+               target="_blank"
+               data-message-title="anticaptchaHelpTitle"
+               data-message="anticaptchaHelp"><!--Anti-captcha.com account support--></a>
+            <a href="https://antcpt.com/eng/support.html"
+               data-message-link="leaveFeedbackLink"
+               target="_blank"
+               data-message-title="leaveFeedbackTitle"
+               data-message="leaveFeedback"><!--Leave feedback--></a>
+        </div>
+    </div>
+
+    <script src="/js/options_all.js"></script>
+</body>
+</html>
