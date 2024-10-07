@@ -1,0 +1,843 @@
+/* make all the classes with prefix _anticaptcha */
+
+.antigate_solver.recaptcha
+{
+    box-sizing: border-box !important;
+
+    position: relative !important;
+    z-index: 99 !important;
+
+    font-size: 16px !important;
+    margin-top: -9px !important;
+
+    display: inline-block !important;
+    /*width: 79%;*/
+    width: 302px !important;
+    /*padding: 5%;
+    padding-left: 15%;*/
+    padding: 15px !important;
+    padding-left: 46px !important;
+
+    color: #333 !important;
+    background: #f9f9f9 no-repeat 2% center !important; /*#224066*/
+
+    background-image: url('chrome-extension://__MSG_@@extension_id__/img/anticaptcha-logo/disabled-32.png') !important;
+
+    border-radius: 0 0 5px 5px !important;
+
+    border: 1px solid #d3d3d3 !important;
+    border-top: 0 !important;
+
+    box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.08) !important;
+
+    transition: background-color 0.5s ease-in-out;
+
+    line-height: 17px !important;
+
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+    font-weight: normal !important;
+
+    visibility: visible !important;
+
+    text-indent: 0; !important;
+}
+
+.antigate_solver.funcaptcha
+{
+    box-sizing: border-box !important;
+
+    position: relative !important;
+    z-index: 99 !important;
+
+    font-size: 16px !important;
+    margin-top: -70px !important;
+
+    display: inline-block !important;
+    width: 302px !important;
+    padding: 15px !important;
+    padding-left: 46px !important;
+
+    color: #333 !important;
+    background: #f5f5f5 no-repeat 2% center !important; /*#224066*/
+
+    background-image: url('chrome-extension://__MSG_@@extension_id__/img/anticaptcha-logo/disabled-32.png') !important;
+
+    /*border-radius: 0 0 5px 5px !important;*/
+
+    border: 1px solid #d3d3d3 !important;
+    border-top: 0 !important;
+
+    box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.08) !important;
+
+    transition: background-color 0.5s ease-in-out;
+
+    line-height: 17px !important;
+
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+    font-weight: normal !important;
+
+    visibility: visible !important;
+}
+
+.antigate_solver.geetest
+{
+    box-sizing: border-box !important;
+
+    position: relative !important;
+    z-index: 99 !important;
+
+    font-size: 16px !important;
+
+    display: inline-block !important;
+    width: 302px !important;
+    padding: 15px !important;
+    padding-left: 46px !important;
+
+    color: #333 !important;
+    background: #f5f5f5 no-repeat 2% center !important; /*#224066*/
+
+    background-image: url('chrome-extension://__MSG_@@extension_id__/img/anticaptcha-logo/disabled-32.png') !important;
+
+    /*border-radius: 0 0 5px 5px !important;*/
+
+    border: 1px solid #d3d3d3 !important;
+
+    box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.08) !important;
+
+    transition: background-color 0.5s ease-in-out;
+
+    line-height: 17px !important;
+
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+    font-weight: normal !important;
+
+    visibility: visible !important;
+}
+
+.antigate_solver.hcaptcha
+{
+    box-sizing: border-box !important;
+
+    position: relative !important;
+    z-index: 99 !important;
+
+    font-size: 16px !important;
+    margin-top: -19px !important;
+
+    display: block !important;
+    width: 302px !important;
+    padding: 15px !important;
+    padding-left: 46px !important;
+
+    color: #333 !important;
+    background: #f9f9f9 no-repeat 2% center !important; /*#224066*/
+
+    background-image: url('chrome-extension://__MSG_@@extension_id__/img/anticaptcha-logo/disabled-32.png') !important;
+
+    border-radius: 0 0 2px 2px !important;
+
+    border: 1px solid rgb(224, 224, 224) !important;
+    border-top: 0 !important;
+
+
+    transition: background-color 0.5s ease-in-out;
+
+    line-height: 17px !important;
+
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+    font-weight: normal !important;
+
+    visibility: visible !important;
+
+    text-indent: 0; !important;
+}
+
+.antigate_solver.recaptcha:hover
+{
+
+    /*
+    background-color: rgba(34, 64, 102, 1) !important;
+    */
+}
+
+.antigate_solver.recaptcha.in_process,
+.antigate_solver.funcaptcha.in_process,
+.antigate_solver.geetest.in_process,
+.antigate_solver.hcaptcha.in_process
+{
+    background-image: url('chrome-extension://__MSG_@@extension_id__/img/anticaptcha-logo/active-32.png') !important;
+}
+
+.antigate_solver.recaptcha.solved,
+.antigate_solver.funcaptcha.solved,
+.antigate_solver.geetest.solved,
+.antigate_solver.hcaptcha.solved
+{
+    background-image: url('chrome-extension://__MSG_@@extension_id__/img/anticaptcha-logo/32.png') !important;
+}
+
+.antigate_solver.recaptcha.error,
+.antigate_solver.recaptcha.error a,
+.antigate_solver.funcaptcha.error,
+.antigate_solver.funcaptcha.error a,
+.antigate_solver.geetest.error,
+    .antigate_solver.geetest.error a,
+.antigate_solver.hcaptcha.error,
+.antigate_solver.hcaptcha.error a
+{
+    color: #d71164 !important
+}
+
+.antigate_solver.recaptcha.pulsate,
+.antigate_solver.hcaptcha.pulsate
+{
+    animation: pulsate_white_color 2s linear infinite;
+}
+
+.antigate_solver.recaptcha a,
+.antigate_solver.funcaptcha a,
+.antigate_solver.geetest a,
+.antigate_solver.hcaptcha a
+{
+    color: #333 !important
+}
+
+.antigate_solver.recaptcha a.status,
+.antigate_solver.hcaptcha a.status
+{
+    text-decoration: none !important;
+    cursor: default !important;
+    font-weight: normal !important;
+}
+
+.antigate_solver.recaptcha a.control,
+.antigate_solver.hcaptcha a.control
+{
+    cursor: pointer !important;
+
+    float: right !important;
+
+    text-decoration: none !important;
+}
+
+.antigate_solver.recaptcha a.control.reload,
+.antigate_solver.hcaptcha a.control.reload
+{
+    width: 30px !important;
+    height: 30px !important;
+
+    background-image: url('chrome-extension://__MSG_@@extension_id__/img/reload_30.svg') !important;
+
+    margin-top: -6px !important;
+    right: 7px !important;
+    position: absolute !important;
+
+    text-align: center !important;
+    line-height: 29px !important;
+    font-size: 13px !important;
+
+    animation: color_orange_to_red 30s linear forwards;
+}
+
+.antigate_solver.recaptcha a.control.reload.active,
+.antigate_solver.hcaptcha a.control.reload.active
+{
+    background-image: url('chrome-extension://__MSG_@@extension_id__/img/reload_30_active.svg') !important;
+}
+
+@keyframes color_orange_to_red {
+    0% {
+        color: #ffa872;
+    }
+    100% {
+        color: red;
+    }
+}
+
+@keyframes pulsate_white_color {
+    0% { color: rgba(255, 255, 255, 0.3) }
+    50% { color: rgba(255, 255, 255, 1) }
+    100% { color: rgba(255, 255, 255, 0.5) }
+}
+
+.solved_flag
+{
+    position: absolute !important;
+    display: block !important;
+    width: 32px !important;
+    margin-top: -60px !important;
+    margin-left: 12px !important;
+
+    visibility: visible !important;
+}
+
+.solved_flag.funcaptcha {
+    margin-top: -105px !important;
+    margin-left: 9px !important;
+}
+
+.solved_flag.hcaptcha {
+    margin-top: -90px !important;
+    margin-left: 21px !important;
+}
+
+div[align="center"] .solved_flag {
+    position: relative !important;
+    margin-left: -240px !important;
+    z-index: 100;
+    margin-bottom: 74px;
+}
+
+#mark_cancel_link_input.mark_cancel_link.input
+{
+    /*position: relative !important;*/
+    /*box-sizing: content-box !important;*/
+    z-index: 100 !important;
+
+    display: inline-block !important;
+    position: absolute !important;
+
+/*    text-align: center !important;
+    font-size: 16px !important;
+
+    width: 16px !important;
+    height: 16px !important;*/
+
+    margin: -14px 0 0 -14px !important;
+
+    padding: 2px !important;
+
+    /*background: rgba(34, 64, 102, 0.7) no-repeat center center !important;*/
+    background-color: #e8e8e8 !important;
+
+    border-radius: 2px !important;
+    border: 1px solid #d3d3d3 !important;
+
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.08) !important;
+
+    /*color: transparent !important;*/
+
+    cursor: pointer !important;
+
+    /*transition: background-color 0.5s ease-in-out;*/
+
+    line-height: 0 !important;
+/*    font-weight: normal !important;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+
+    text-decoration: none !important;*/
+
+    visibility: visible !important;
+
+    text-indent: 0 !important;
+    width: auto !important;
+}
+
+#mark_cancel_link_input.mark_cancel_link.input:hover,
+#mark_cancel_link_input.mark_cancel_link.input:focus
+{
+    background-color: rgba(232, 232, 232, 0.8) !important;
+}
+
+#mark_cancel_link_input.mark_cancel_link.input span
+{
+    display: inline-block !important;
+    width: 32px !important;
+    height: 20px !important;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/img/anticaptcha-logo/disabled-coss-input.png') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    transition: opacity 0.2s !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#mark_cancel_link_input.mark_cancel_link.input:hover span,
+#mark_cancel_link_input.mark_cancel_link.input:focus span
+{
+    opacity: 0.2 !important;
+}
+
+#mark_cancel_link_input.mark_cancel_link.active.input span
+{
+    background-image: url('chrome-extension://__MSG_@@extension_id__/img/anticaptcha-logo/coss-input.png') !important;
+}
+
+#mark_cancel_link_input.mark_cancel_link.input::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 7px !important;
+    top: 8px !important;
+}
+
+#mark_cancel_link_input.mark_cancel_link.input:hover::before,
+#mark_cancel_link_input.mark_cancel_link.input:focus::before
+{
+    content: url('chrome-extension://__MSG_@@extension_id__/img/coss/cross-red.png') !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image {
+    /*position: relative !important;*/
+    /*box-sizing: content-box !important;*/
+    z-index: 101 !important;
+
+    display: inline-block !important;
+    position: absolute !important;
+
+    /*text-align: left !important;*/
+
+/*    width: 32px !important;
+    height: 20px !important;*/
+
+    margin: -14px 0 0 -14px !important;
+
+    /*padding: 2px !important;*/
+
+    /*background: rgba(34, 64, 102, 0.7) no-repeat center center !important;*/
+    /*background: #fff;*/
+
+/*    border-radius: 2px !important;
+    border: 1px solid #d3d3d3 !important;*/
+
+    /*box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.08) !important;*/
+
+    /*color: transparent !important;*/
+
+    cursor: pointer !important;
+
+    /*transition: background-color 0.5s ease-in-out;*/
+
+    line-height: 0 !important;
+/*    font-weight: normal !important;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+
+    text-decoration: none !important;*/
+
+    visibility: visible !important;
+    background-color: transparent !important;
+    width: auto !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 14px !important;
+    top: 9px !important;
+    /*z-index: 2 !important;*/
+}
+
+#mark_cancel_link_image.mark_cancel_link.image:hover::before,
+#mark_cancel_link_image.mark_cancel_link.image:focus::before
+{
+    content: url('chrome-extension://__MSG_@@extension_id__/img/coss/cross-red.png') !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image:hover div.antigate_solver.image,
+#mark_cancel_link_image.mark_cancel_link.image:focus div.antigate_solver.image
+{
+    background-color: rgba(232, 232, 232, 0.8) !important;
+    border-color: rgba(232, 232, 232, 0.8) !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image:hover div.antigate_solver.image::before,
+#mark_cancel_link_image.mark_cancel_link.image:focus div.antigate_solver.image::before
+{
+    background: linear-gradient(135deg, rgba(232, 232, 232, 0.8) 50%, rgba(0, 0, 0, 0) 50%);
+    border-color: rgba(211, 211, 211, 0.8) !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image span.face {
+    width: 22px !important;
+    height: 22px !important;
+    display: inline-block !important;
+    background: url('chrome-extension://__MSG_@@extension_id__/img/coss/icon-logo-32x32-disabled.png') no-repeat !important; /*0 -6px*/
+    background-size: cover !important;
+    top: 1px !important;
+    position: relative !important;
+
+    padding: 0 !important;
+    margin: 0 8px 8px 8px !important;
+
+    transition: opacity 0.2s !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image.active span.face
+{
+    background-image: url('chrome-extension://__MSG_@@extension_id__/img/coss/icon-logo-32x32.png') !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image.in_process span.face
+{
+    background-image: url('chrome-extension://__MSG_@@extension_id__/img/coss/icon-logo-32x32-active.png') !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image:hover span.face,
+#mark_cancel_link_image.mark_cancel_link.image:focus span.face
+{
+    opacity: 0.2 !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.__ac_options {
+    display: none;
+    box-sizing: border-box !important;
+
+    text-align: left !important;
+
+    padding: 6px !important;
+
+    color: rgb(51, 51, 51) !important;
+    font-size: 14px !important;
+    margin-left: -130px !important;
+    width: 130px !important;
+
+    position: absolute !important;
+    margin-top: -30px !important;
+    /*margin-left: -85px;*/
+
+    border: 1px solid #d3d3d3 !important;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.08) !important;
+    line-height: normal !important;
+    background-color: #f3f3f3 !important;
+    z-index: 1000 !important;
+    font-weight: normal !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.__ac_options .__ac_options_toggle {
+    display: block !important;
+    font-weight: normal !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.__ac_options .__ac_about_options_link {
+    /*font-size: 12px !important;*/
+    font-weight: normal !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.__ac_options .__ac_form_container {
+    position: static !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.__ac_options .__ac_form {
+    /*display: none;*/
+
+    position: static !important;
+
+    margin-top: 4px !important;
+    font-size: 13px !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.__ac_options fieldset {
+    padding: 4px !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.__ac_options a {
+    color: #477ED2 !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.__ac_options input,
+#mark_cancel_link_image.mark_cancel_link.image div.__ac_options label {
+    display: inline-block !important;
+    font-size: 14px !important;
+    margin: 1px !important;
+    padding: 0 !important;
+    text-indent: 0;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.__ac_options input {
+    width: auto !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.__ac_options input[type=text],
+#mark_cancel_link_image.mark_cancel_link.image div.__ac_options input[type=number] {
+    height: 20px !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.__ac_options input[type=text] {
+    width: 100% !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.__ac_options input[type=number] {
+    width: 50% !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.__ac_options::before {
+    content: '' !important;
+    position: absolute !important;
+    width: 6px !important;
+    height: 6px !important;
+    /*background-color: #e8e8e8 !important;*/
+    background: linear-gradient(135deg, #f3f3f3 50%, rgba(0, 0, 0, 0) 50%) !important;
+    border: 1px solid #cecece !important;
+    border-width: 1px 0 0 1px !important;
+    transform: rotate(135deg) !important;
+    left: 125px !important;
+    top: 7px !important;
+    /*margin-left: 10px;*/
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.antigate_solver {
+    display: inline-block !important;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    text-indent: 0 !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.antigate_solver.image::before {
+    content: '' !important;
+    position: absolute !important;
+    width: 6px !important;
+    height: 6px !important;
+    /*background-color: #e8e8e8 !important;*/
+    background: linear-gradient(135deg, #e8e8e8 50%, rgba(0, 0, 0, 0) 50%);
+    border: 1px solid #cecece !important;
+    border-width: 1px 0 0 1px !important;
+    transform: rotate(-45deg) !important;
+    left: -4px !important;
+    top: 7px !important;
+    /*margin-left: 10px;*/
+}
+
+#mark_cancel_link_image.mark_cancel_link.image div.antigate_solver.image {
+    position: absolute !important;
+    /*margin-left: 8px !important;*/
+
+    color: #333 !important;
+
+    /*box-sizing: content-box !important;*/
+    z-index: 100 !important;
+
+    /*display: inline-block !important;*/
+
+    text-align: left !important;
+    font-size: 15px !important;
+
+    min-width: 120px !important;
+
+/*    width: 32px !important;
+    height: 20px !important;*/
+
+    padding: 2px 6px !important;
+
+    /*background: rgba(34, 64, 102, 0.7) no-repeat center center !important;*/
+    background-color: #e8e8e8 !important;
+    /*height: 20px;*/
+    line-height: 20px !important;
+
+    border-radius: 2px !important;
+    border: 1px solid #d3d3d3 !important;
+
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.08) !important;
+
+    /*color: transparent !important;*/
+
+    /*transition: background-color 0.5s ease-in-out;*/
+
+/*    font-weight: normal !important;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+
+    text-decoration: none !important;*/
+
+    visibility: visible !important;
+}
+
+#mark_cancel_link_image.mark_cancel_link.image.error div.antigate_solver.image
+{
+    color: #d71164 !important
+}
+
+#mark_cancel_link_input.mark_cancel_link.input:focus,
+#mark_cancel_link_image.mark_cancel_link.image:focus
+{
+    outline-style: auto !important;
+}
+
+.shadow_pulsation {
+    box-shadow: 0px 0px 0px 0px #5b9dd9 !important;
+    animation-name: shadow_pulsation !important;
+    animation-duration: 2s !important;
+    animation-iteration-count: infinite !important;
+    animation-timing-function: linear !important;
+}
+
+@keyframes shadow_pulsation {
+    0% {
+        box-shadow: 0px 0px 0px 0px #5b9dd9;
+    }
+    50% {
+        box-shadow: 0px 0px 0px 3px rgba(91, 157, 217, 0.2);
+    }
+    100% {
+        box-shadow: 0px 0px 0px 0px #5b9dd9;
+    }
+}
+
+/* todo: repeat all this stuff on MOZILLA too! */
+
+/*repeat css hack>*/
+@supports (-moz-appearance:meterbar) {
+    .antigate_solver.recaptcha,
+    .antigate_solver.funcaptcha,
+    .antigate_solver.geetest,
+    .antigate_solver.hcaptcha
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/anticaptcha-logo/disabled-32.png') !important;
+    }
+
+    .antigate_solver.recaptcha.in_process,
+    .antigate_solver.funcaptcha.in_process,
+    .antigate_solver.geetest.in_process,
+    .antigate_solver.hcaptcha.in_process
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/anticaptcha-logo/active-32.png') !important;
+    }
+
+    .antigate_solver.recaptcha.solved,
+    .antigate_solver.funcaptcha.solved,
+    .antigate_solver.geetest.solved,
+    .antigate_solver.hcaptcha.solved
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/anticaptcha-logo/32.png') !important;
+    }
+
+    .antigate_solver.recaptcha a.control.reload,
+    .antigate_solver.hcaptcha a.control.reload
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/reload_30.svg') !important;
+    }
+
+    .antigate_solver.recaptcha a.control.reload.active,
+    .antigate_solver.hcaptcha a.control.reload.active
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/reload_30_active.svg') !important;
+    }
+
+    #mark_cancel_link_input.mark_cancel_link.input span
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/anticaptcha-logo/disabled-coss-input.png') !important;
+    }
+
+    #mark_cancel_link_input.mark_cancel_link.active.input span
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/anticaptcha-logo/coss-input.png') !important;
+    }
+
+    #mark_cancel_link_input.mark_cancel_link.input:hover::before,
+    #mark_cancel_link_input.mark_cancel_link.input:focus::before
+    {
+        content: url('moz-extension://__MSG_@@extension_id__/img/coss/cross-red.png') !important;
+    }
+
+    #mark_cancel_link_image.mark_cancel_link.image:hover::before,
+    #mark_cancel_link_image.mark_cancel_link.image:focus::before
+    {
+        content: url('moz-extension://__MSG_@@extension_id__/img/coss/cross-red.png') !important;
+    }
+
+    #mark_cancel_link_image.mark_cancel_link.image span.face {
+        background: url('moz-extension://__MSG_@@extension_id__/img/coss/icon-logo-32x32-disabled.png') no-repeat !important; /*0 -6px*/
+        background-size: cover !important;
+    }
+
+    #mark_cancel_link_image.mark_cancel_link.image.active span.face
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/coss/icon-logo-32x32.png') !important;
+    }
+
+    #mark_cancel_link_image.mark_cancel_link.image.in_process span.face
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/coss/icon-logo-32x32-active.png') !important;
+    }
+
+    #mark_cancel_link_input.mark_cancel_link.input:focus,
+    #mark_cancel_link_image.mark_cancel_link.image:focus
+    {
+        outline-style: dashed;
+        outline-color: #7ebfff !important;
+        outline-width: 2px;
+    }
+}
+/*<repeat css hack*/
+
+
+@-moz-document url-prefix() {
+    .antigate_solver.recaptcha,
+    .antigate_solver.funcaptcha,
+    .antigate_solver.geetest,
+    .antigate_solver.hcaptcha
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/anticaptcha-logo/disabled-32.png') !important;
+    }
+
+    .antigate_solver.recaptcha.in_process,
+    .antigate_solver.funcaptcha.in_process,
+    .antigate_solver.geetest.in_process,
+    .antigate_solver.hcaptcha.in_process
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/anticaptcha-logo/active-32.png') !important;
+    }
+
+    .antigate_solver.recaptcha.solved,
+    .antigate_solver.funcaptcha.solved,
+    .antigate_solver.geetest.solved,
+    .antigate_solver.hcaptcha.solved
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/anticaptcha-logo/32.png') !important;
+    }
+
+    .antigate_solver.recaptcha a.control.reload,
+    .antigate_solver.hcaptcha a.control.reload
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/reload_30.svg') !important;
+    }
+
+    .antigate_solver.recaptcha a.control.reload.active,
+    .antigate_solver.hcaptcha a.control.reload.active
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/reload_30_active.svg') !important;
+    }
+
+    #mark_cancel_link_input.mark_cancel_link.input span
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/anticaptcha-logo/disabled-coss-input.png') !important;
+    }
+
+    #mark_cancel_link_input.mark_cancel_link.active.input span
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/anticaptcha-logo/coss-input.png') !important;
+    }
+
+    #mark_cancel_link_input.mark_cancel_link.input:hover::before,
+    #mark_cancel_link_input.mark_cancel_link.input:focus::before
+    {
+        content: url('moz-extension://__MSG_@@extension_id__/img/coss/cross-red.png') !important;
+    }
+
+    #mark_cancel_link_image.mark_cancel_link.image:hover::before,
+    #mark_cancel_link_image.mark_cancel_link.image:focus::before
+    {
+        content: url('moz-extension://__MSG_@@extension_id__/img/coss/cross-red.png') !important;
+    }
+
+    #mark_cancel_link_image.mark_cancel_link.image span.face {
+        background: url('moz-extension://__MSG_@@extension_id__/img/coss/icon-logo-32x32-disabled.png') no-repeat !important; /*0 -6px*/
+        background-size: cover !important;
+    }
+
+    #mark_cancel_link_image.mark_cancel_link.image.active span.face
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/coss/icon-logo-32x32.png') !important;
+    }
+
+    #mark_cancel_link_image.mark_cancel_link.image.in_process span.face
+    {
+        background-image: url('moz-extension://__MSG_@@extension_id__/img/coss/icon-logo-32x32-active.png') !important;
+    }
+
+    #mark_cancel_link_input.mark_cancel_link.input:focus,
+    #mark_cancel_link_image.mark_cancel_link.image:focus
+    {
+        outline-style: dashed;
+        outline-color: #7ebfff !important;
+        outline-width: 2px;
+    }
+}
