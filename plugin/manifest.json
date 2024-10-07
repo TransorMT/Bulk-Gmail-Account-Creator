@@ -1,0 +1,90 @@
+{
+  "manifest_version": 2,
+  "default_locale": "en",
+
+  "oauth2": {
+    "client_id": "216545209139-4lbiot8mq929jriphbqgad4jtiutuqib.apps.googleusercontent.com",
+    "scopes": [
+      "profile"
+    ]
+  },
+
+  
+
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "short_name": "__MSG_appShortName__",
+  "version": "0.66",
+
+  
+  
+
+  "icons": {
+    "16": "/img/anticaptcha-logo/16.png",
+    "48": "/img/anticaptcha-logo/48.png",
+    "128": "/img/anticaptcha-logo/128.png"
+  },
+
+  "options_ui": {
+    "page": "popup.html",
+    "chrome_style": true
+  },
+  "options_page": "popup.html",
+
+  "browser_action": {
+    "default_icon": {
+      "16": "/img/anticaptcha-logo/16.png",
+      "32": "/img/anticaptcha-logo/32.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "Show my balance"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "match_about_blank": true,
+      "run_at": "document_start",
+      "js": ["/js/content_scripts1.js"],
+      "all_frames": true
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "match_about_blank": true,
+      "js": ["/js/content_scripts2.js"],
+      "css": ["/css/content_scripts.css"],
+      "all_frames": true
+    }
+  ],
+
+  "background": {
+    "scripts": ["/js/config_ac_api_key.js", "/js/background.js"],
+    "persistent": true
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "identity",
+    "identity.email",
+    "\u003Call_urls>",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+
+  "web_accessible_resources": [
+    "img/*",
+    "css/*",
+    "sounds/*",
+    "js/recaptcha3_object_interceptor.js",
+    "js/recaptcha3_object_interceptor_callback.js",
+    "js/funcaptcha_object_inteceptor.js",
+    "js/hcaptcha_object_inteceptor.js",
+    "js/post_message_poste_restante.js",
+    "js/geetest_object_interceptor.js",
+    "js/mocking_headless.js"
+  ],
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval' blob: filesystem:; object-src 'self' blob: filesystem:;"
+}
