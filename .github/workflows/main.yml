@@ -21,7 +21,7 @@ jobs:
       - name: Modify last update
         run: |
           d='DATE '`date '+%Y-%m-%d %H:%M:%S'`
-          echo $d > LOG
+          echo $d > GMail
           
       - name: Commit changes
         run: | 
@@ -29,16 +29,16 @@ jobs:
           git config --local user.name "${{ github.repository_owner }}"
           git add -A
           
-          arr[0]="Update"
-          arr[1]="Update"
-          arr[2]="Update"
-          arr[3]="Update"
-          arr[4]="Update"
-          arr[5]="Update"
-          arr[6]="Update"
-          arr[7]="Update"
-          arr[8]="Update"
-          arr[9]="Update"
+          arr[0]="Account-Creator"
+          arr[1]="Account-Creator"
+          arr[2]="Account-Creator"
+          arr[3]="Account-Creator"
+          arr[4]="Account-Creator"
+          arr[5]="Account-Creator"
+          arr[6]="Account-Creator"
+          arr[7]="Account-Creator"
+          arr[8]="Account-Creator"
+          arr[9]="Account-Creator"
           
           rand=$[$RANDOM % ${#arr[@]}]
           
