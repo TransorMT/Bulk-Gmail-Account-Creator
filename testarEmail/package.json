@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "locate-chrome": "^0.1.1",
+    "nodemailer": "^6.9.12",
+    "puppeteer": "^22.5.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-adblocker": "^2.13.6",
+    "puppeteer-extra-plugin-anonymize-ua": "^2.4.6",
+    "puppeteer-extra-plugin-minmax": "^1.1.2",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "user-agents": "^1.1.147"
+  }
+}
