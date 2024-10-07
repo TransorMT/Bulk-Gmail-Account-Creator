@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recaptcha precache debug</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>Recaptcha precaching feature</h2>
+        <div style="width: 600px">
+            <p>
+                Every time you solve a regular recaptcha for some domain this feature (if enabled) starts to solve another <b>K</b> recaptcha tasks for this domain in a background. <br />
+                So when you request another recaptcha — it will be already in process of solving or even solved which will dramatically decrease a medium working time. <br />
+                Especially effective for equally periodic requests for the same domain.
+            </p>
+            <p style="color: red">
+                Attention!!! This option will increase spending since some of the so called precached tasks will be expired when you stop to request more recaptchas (Google set a 2 min lifetime for every solved recaptcha). <br />
+                Our main goal now is to find a balance between an extra money waste and a solving interval. <br />
+                We really appreciate any feedback about this feature usage. Together we'll make our plug-in great again!
+            </p>
+            <p>
+                It can be set up by changing a <b>K</b>-number (precachedSolutionsCountK) which determines how much of spare (not taken by any other process) precached solutions should be available for usage anytime.
+            </p>
+            <p>
+                The more frequent you need to solve recaptcha the more this number should be. The better min-max values can be found experimentally. <br />
+                For typical usage we recommend the following values: min = 2 and max = 4. <br />
+                Automatic algorithm will optimize the <b>K-number</b> in the Min Max gap you've chosen for a better performance and a less spending. <br />
+                This <b>K</b>-number is different for every domain and calculated independently.
+            </p>
+            <p>
+                All the debug information can be seen in a table below when you start solving recaptcha in this precache mode.
+            </p>
+        </div>
+        <div id="allTheData"></div>
+        <script src="/js/recaptcha_precache_debug.js"></script>
+    </body>
+</html>
