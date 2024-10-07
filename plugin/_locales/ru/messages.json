@@ -1,0 +1,602 @@
+{
+  "appName": {
+    "message": "AntiCaptcha авто разгадывание капч",
+    "description": "The title of the application, displayed in the web store."
+  },
+  "appDesc": {
+    "message": "Расширение позволяет вам автоматически решать капчи, найденные на любой веб странице.",
+    "description":"The description of the application, displayed in the web store."
+  },
+  "appShortName": {
+    "message": "AntiCaptcha",
+    "description": ""
+  },
+  "anticaptchaLogoAlt": {
+    "message": "Настройки плагина AntiCaptcha",
+    "description":""
+  },
+  "balanceTitle": {
+    "message": "Ваш баланс",
+    "description":""
+  },
+  "newVersionMessageTitle": {
+    "message": "Доступна новая версия плагина",
+    "description":""
+  },
+  "enablePluginTitle": {
+    "message": "Включить/Выключить плагин AntiCaptcha",
+    "description":""
+  },
+  "enablePlugin": {
+    "message": "Включить плагин AntiCaptcha",
+    "description":""
+  },
+  "mainTabButtonTitle": {
+    "message": "Переключиться на закладку Главные",
+    "description":""
+  },
+  "mainTabButton": {
+    "message": "Главные",
+    "description":""
+  },
+  "whatSolveTabButtonTitle": {
+    "message": "Переключиться на закладку Что решать",
+    "description":""
+  },
+  "whatSolveButton": {
+    "message": "Что решать",
+    "description":""
+  },
+  "recaptchaTabButtonTitle": {
+    "message": "Переключиться на закладку Recaptcha advanced",
+    "description":""
+  },
+  "recaptchaTabButton": {
+    "message": "Recaptcha advanced",
+    "description":""
+  },
+  "advancedTabButtonTitle": {
+    "message": "Переключиться на вкладку Расширенные",
+    "description":""
+  },
+  "advancedButton": {
+    "message": "Расширенные",
+    "description":""
+  },
+  "accountKeyTitle": {
+    "message": "Укажите ваш <a href=\"https://anti-captcha.com/\" target=\"_blank\" title=\"Anti Captcha: automated captcha solving service.\">Anti-Captcha.com</a> ключ учетной записи.",
+    "description":""
+  },
+  "accountKeyTitleTitle": {
+    "message": "Укажите здесь ваш Anti-Captcha.com ключ учетной записи.",
+    "description":""
+  },
+  "accountKeyTitlePlaceholder": {
+    "message": "Anti-Captcha.com ключ учетной записи",
+    "description":""
+  },
+  "iconLockAlt": {
+    "message": "Иконка ключа",
+    "description":""
+  },
+  "noAccountKeyTitle": {
+    "message": "Нажмите для появления подсказки",
+    "description":""
+  },
+  "noAccountKey": {
+    "message": "Зачем нужен ключ и где его взять?",
+    "description":""
+  },
+  "noAccountKeyInfo": {
+    "message": "Для работы плагина необходим специальный 32-х значный буквенно-цифровой ключ. Надо зарегистрироваться на сайте <a href=\"https://anti-captcha.com/\" target=\"_blank\" title=\"Anti Captcha: automated captcha solving service.\">Anti-Captcha.com</a>, затем пополнить счет и указать в поле выше ключ, который вы можете найти в разделе <a href=\"https://anti-captcha.com/clients/settings/apisetup\" target=\"_blank\" title=\"Перейти в раздел Настройка API сайта anti-captcha.com\">\"Настройки\" -> \"Настройка API\" сайта</a>.",
+    "description":""
+  },
+  "noAccountKeyCloseTitle": {
+    "message": "Закрыть окно \"Зачем мне нужен ключ\"",
+    "description":""
+  },
+  "autoSubmitFormTitle": {
+    "message": "Автоотправка формы после разгадывания",
+    "description":""
+  },
+  "autoSubmitForm": {
+    "message": "Автоотправка формы после разгадывания",
+    "description":""
+  },
+  "autoSubmitFormInfo": {
+    "message": "Отправляет целевому сайту решение капчи на проверку после его получения.<br /> Эта функция может работать некорректно на некоторых сайтах. Уберите галочку, если страница перезагружается после разгадывания.",
+    "description":""
+  },
+  "useRecaptchaAcceleratorTitle": {
+    "message": "Включить / выключить функцию акселерации reCAPTCHA 2",
+    "description":""
+  },
+  "useRecaptchaAccelerator": {
+    "message": "Включить акселерацию reCAPTCHA 2",
+    "description":""
+  },
+  "useRecaptchaAcceleratorInfo": {
+    "message": "Эта опция позволит вам решать reCAPTCHA 2 быстрее предоставляя нам небольшой фрагмент HTML, который окружает блок Рекапчи. <br /> Используя эти данные (на стороне anti-captcha.com) мы сможем обмануть Рекапчу, заставя думать, что она решается на настоящем сайте. <br /> Никакие важные данные не отправляются, ни значения полей, ни полный HTML. Только урезанный код, который включает поддерево элемента .g-recaptcha. <br /> Например: <i> &lt;body&gt;&lt;main class='main'&gt;&lt;form action='/sendForm'&gt;&lt;input type='text' name='somename'&gt;&lt;div class='g-recaptcha'&gt;&lt;/div&gt;&lt;/form&gt;&lt;/main&gt;&lt;/body&gt;</i> <br /> Все атрибуты, кроме id, class, role, type, name, method, action, вырезаются. <br /> Пожалуйста запаситесь терпением, мы плотно работаем над этой фичей и верим, что она позволит сэкономить вам время, а следовательно, и деньги!",
+    "description":""
+  },
+  "recaptchaPrecachingLegend": {
+    "message": "Функция прекеша reCAPTCHA 2",
+    "description":""
+  },
+  "useRecaptchaPrecachingTitle": {
+    "message": "Включить / выключить функцию предварительного кеширования reCAPTCHA 2",
+    "description":""
+  },
+  "useRecaptchaPrecaching": {
+    "message": "Включить предварительное кеширование reCAPTCHA 2",
+    "description":""
+  },
+  "useRecaptchaPrecachingInfo": {
+    "message": "Новая функция позволяет вам уменьшить время решения рекапчи в два и более раз, в зависимости от режима в котором вы ее решаете. <a href='' target='_blank' id='recaptcha_precache_debug_link'>Страница отладки прекешинга reCAPTCHA 2</a>",
+    "description":""
+  },
+  "precachingKNumber": {
+    "message": "Число K (precachedSolutionsCountK) минимум и максимум",
+    "description":""
+  },
+  "precachingKNumberInfo": {
+    "message": "Число дополнительных не зарезервированных тасков для предварительного кеширования. Автоматический алгоритм подгоняет оптимальное число в пределах заданного минимума и максимума с целью уменьшения затрат. Рекомендованные значения: Min=2, Max=4.",
+    "description":""
+  },
+  "precachingKNumberMinTitle": {
+    "message": "Пожалуйста укажите минимальное значение числа K",
+    "description":""
+  },
+  "precachingKNumberMaxTitle": {
+    "message": "Пожалуйста укажите максимальное значение числа K",
+    "description":""
+  },
+  "solveRecaptcha2Title": {
+    "message": "Включить/выключить авторазгадывание всех найденных reCAPTCHA 2",
+    "description":""
+  },
+  "solveRecaptcha2": {
+    "message": "Разгадывать reCAPTCHA 2 (Я не робот) автоматически",
+    "description":""
+  },
+  "solveRecaptcha2Info": {
+    "message": "Вы можете выключить данную функцию, если не хотите, чтобы все найденные на странице reCAPTCHA 2 автоматически решались. Капчи-картинки будут работать как обычно.",
+    "description":""
+  },
+  "solveRecaptcha3Title": {
+    "message": "Включить/выключить авторазгадывание reCAPTCHA 3",
+    "description":""
+  },
+  "solveRecaptcha3": {
+    "message": "Разгадывать reCAPTCHA 3 автоматически",
+    "description":""
+  },
+  "solveRecaptcha3Info": {
+    "message": "Выключите эту настройку, если вы не хотите решать новую reCAPTCHA 3.",
+    "description":""
+  },
+  "recaptcha3DesiredScore": {
+    "message": "Желаемое значение:",
+    "description":""
+  },
+  "recaptcha3DesiredScoreTitle": {
+    "message": "Пожалуйста введите желаемое значение очков Recaptcha 3",
+    "description":""
+  },
+  "solveInvisibleRecaptcha2Title": {
+    "message": "Включить/выключить авторазгадывание всех невидимых reCAPTCHA",
+    "description":""
+  },
+  "solveInvisibleRecaptcha2": {
+    "message": "Разгадывать невидимую reCAPTCHA автоматически",
+    "description":""
+  },
+  "solveInvisibleRecaptcha2Info": {
+    "message": "Решать Рекапчу, которая выглядит как небольшой значок, находящийся обычно в правом нижнем углу сайта.",
+    "description":""
+  },
+  "dontReuseRecaptchaSolutionTitle": {
+    "message": "Выключить/Включить повторное использование решения reCAPTCHA 2",
+    "description":""
+  },
+  "dontReuseRecaptchaSolution": {
+    "message": "Не использовать повторно предыдущее решение reCAPTCHA 2 на этой же странице",
+    "description":""
+  },
+  "dontReuseRecaptchaSolutionInfo": {
+    "message": "Новый процесс решения рекапчи будет запускаться для вновь появившегося блока рекапчи, даже если на этой странице недавно была решена reCAPTCHA 2, которая еще не \"протухла\". Если выключено, то решение рекапчи будет запускаться только после того как предыдущее решение на этой странице протухнет.",
+    "description":""
+  },
+  "solveFuncaptchaTitle": {
+    "message": "Включить/выключить авторазгадывание всех найденных Funcaptcha",
+    "description":""
+  },
+  "whereSolveWhiteList": {
+    "message": "Список доменов, на которых будет решаться капча",
+    "description":""
+  },
+  "whereSolveBlackList": {
+    "message": "Список доменов, на которых НЕ будет решаться капча",
+    "description":""
+  },
+  "whereSolveList": {
+    "message": "Список доменов, где будет или не будет решаться капча",
+    "description":""
+  },
+  "whereSolveHostnameTitle": {
+    "message": "Введите домен, который вы хотите добавить в список",
+    "description":""
+  },
+  "whereSolveAddHostname": {
+    "message": "Добавить/удалить домен в/из списка",
+    "description":""
+  },
+  "whereSolveActLike": {
+    "message": "Воспринимать как &nbsp;",
+    "description":""
+  },
+  "whereSolveActLikeWhiteList": {
+    "message": "&nbsp; Белый лист",
+    "description":""
+  },
+  "whereSolveActLikeWhiteListTitle": {
+    "message": "Решать только на выбранных доменах",
+    "description":""
+  },
+  "whereSolveActLikeBlackList": {
+    "message": "&nbsp; Черный лист",
+    "description":""
+  },
+  "whereSolveActLikeBlackListTitle": {
+    "message": "Решение пропускается для указанных доменов",
+    "description":""
+  },
+  "whereSolveAttention": {
+    "message": "Внимание: Белый список пуст, ни на каком домене не будут решатся капчи.",
+    "description":""
+  },
+  "solveFuncaptcha": {
+    "message": "Разгадывать Funcaptcha автоматически",
+    "description":""
+  },
+  "solveFuncaptchaInfo": {
+    "message": "Включить если вы хотите чтобы Funcaptcha автоматически решались.",
+    "description":""
+  },
+  "solveGeetestTitle": {
+    "message": "Включить/выключить авторазгадывание всех найденных Geetest",
+    "description":""
+  },
+  "solveGeetest": {
+    "message": "Разгадывать Geetest автоматически",
+    "description":""
+  },
+  "solveGeetestInfo": {
+    "message": "Включить если вы хотите чтобы Geetest автоматически решались.",
+    "description":""
+  },
+  "solveHcaptchaTitle": {
+    "message": "Включить/выключить авторазгадывание всех найденных hCaptcha",
+    "description":""
+  },
+  "solveHcaptcha": {
+    "message": "Разгадывать hCaptcha автоматически",
+    "description":""
+  },
+  "solveHcaptchaInfo": {
+    "message": "Включить если вы хотите чтобы hCaptcha автоматически решались.",
+    "description":""
+  },
+  "hcaptchaAdvancedLegend": {
+    "message": "Дополнительные настройки Hcaptcha",
+    "description":""
+  },
+  "setIncomingWorkersUserAgentTitle": {
+    "message": "Включить/выключить режим установки входящего User-Agent работника",
+    "description":""
+  },
+  "setIncomingWorkersUserAgent": {
+    "message": "Устанавливать входящий User-Agent работника",
+    "description":""
+  },
+  "setIncomingWorkersUserAgentInfo": {
+    "message": "Для некоторых типов капч (например hCaptcha) вместе с самим решением, мы так же получаем User-Agent работника. При включенной опции мы заменяем User-Agent вашего браузера на это значение на короткий период времени (110 сек) и только для текущего таба. Таким образом браузер больше походит на тот, на котором изначально была решена капча. Это повышает коэффициент успешных решений.",
+    "description":""
+  },
+  "runExplicitInvisibleHcaptchaCallbackWhenChallengeShownTitle": {
+    "message": "Включить/выключить режим вызова callback функции только при появлении окна с выбором изображений для явно созданной невидимой Hcaptcha",
+    "description":""
+  },
+  "runExplicitInvisibleHcaptchaCallbackWhenChallengeShown": {
+    "message": "Запуск callback функции для явной невидимой Hcaptcha только при появлении окна с выбором изображений",
+    "description":""
+  },
+  "runExplicitInvisibleHcaptchaCallbackWhenChallengeShownInfo": {
+    "message": "Невидимая Hcaptcha будет считаться решеной только когда соответствующая ей кнопка будет нажата или Hcaptcha execute метод вызва. В этом случае только когда challenge окно покажется, то будет вызван callback метод целевого сайта. <br /> <span class='important'> Это новое поведение для плагина. Так что если у вас возникают проблемы с невидимой Hcaptcha, попробуйте отключить эту опцию.</span>",
+    "description":""
+  },
+  "startRecaptcha2SolvingWhenChallengeShownTitle": {
+    "message": "Включить/выключить режим запуска рекапчи только при появлении окна с выбором изображений",
+    "description":""
+  },
+  "startRecaptcha2SolvingWhenChallengeShown": {
+    "message": "Начинать разгадывать reCAPTCHA 2 только при появлении окна с выбором изображений",
+    "description":""
+  },
+  "startRecaptcha2SolvingWhenChallengeShownInfo": {
+    "message": "Процесс разгадывания начнется только тогда, когда появляется окно с выбором картинок и подтверждением выбора. Полезно для невидимых reCAPTCHA 2: сохранит Вам немного денег и избавит от нежелательных вызовов callback.",
+    "description":""
+  },
+  "solveOnlyPresentedRecaptcha2Title": {
+    "message": "Не решать скрытую на странице reCAPTCHA 2",
+    "description":""
+  },
+  "solveOnlyPresentedRecaptcha2": {
+    "message": "Решать только представленную на странице reCAPTCHA 2",
+    "description":""
+  },
+  "solveOnlyPresentedRecaptcha2Info": {
+    "message": "Если включено, то решает только ту reCAPTCHA 2, которая действительно видна на странице. Рекапча, находящаяся в невидимом или спрятанном контейнере не будет распознаваться.",
+    "description":""
+  },
+  "usePredefinedImageCaptchaMarksTitle": {
+    "message": "Включить/выключить автоматический поиск капч-картинок и их решение",
+    "description":""
+  },
+  "usePredefinedImageCaptchaMarks": {
+    "message": "Использовать готовые пометки капч-картинок",
+    "description":""
+  },
+  "usePredefinedImageCaptchaMarksInfo": {
+    "message": "Обычные капчи в виде картинок будут автоматом находиться и решаться на всех посещаемых страницах. Основано на отметках других пользователей, при этом ваши пометки всегда будут иметь приоритет.",
+    "description":""
+  },
+  "reenableContextmenuTitle": {
+    "message": "Всегда показывать стандартное контекстное меню",
+    "description":""
+  },
+  "reenableContextmenu": {
+    "message": "Включить контекстное меню браузера",
+    "description":""
+  },
+  "reenableContextmenuInfo": {
+    "message": "Поставьте галочку, если целевой сайт отключает контекстное меню и это мешает отмечать картинку как содержащие капчу. Эта опция воздействует на сайты, которые используют свое собственное контекстное меню и/или блокируют системное.",
+    "description":""
+  },
+  "proxyOnTasksLegend": {
+    "message": "Настройки ProxyOn задач",
+    "description":""
+  },
+  "proxyOnTasksTitle": {
+    "message": "Сделать все таски ProxyOn",
+    "description":""
+  },
+  "proxyOnTasks": {
+    "message": "Решать прокси задания",
+    "description":""
+  },
+  "proxyOnTasksInfo": {
+    "message": "Все задания капч (кроме обычных капч-картинок) будут решаться через прокси, указанный ниже. <br> Это может пригодиться на случай, если целевой сайт проверяет IP адрес решателя капчи. В этом случае этот прокси будет отправляться на anti-captcha.com вместе с ProxyOn таском. Вам так же необходимо воспользоваться ресширением для проксирования по типу <b>Proxy SwitchyOmega</b>. Таким образом Ваш IP адрес и адрес решателя капчи будут совпадать.",
+    "description":""
+  },
+  "proxyOnTasksQuickAdd": {
+    "message": "Быстрое добавление",
+    "description":""
+  },
+  "proxyOnTasksNormalView": {
+    "message": "Обычный режим",
+    "description":""
+  },
+  "proxyOnTasksQuickAddSwitchTitle": {
+    "message": "Переключиться между режимами быстрого и нормального добавления прокси",
+    "description":""
+  },
+  "proxyOnTasksQuickAddInputTitle": {
+    "message": "Введите строку быстрой настройки прокси согласно маске поля ввода",
+    "description":""
+  },
+  "proxyOnTasksQuickAddButtonTitle": {
+    "message": "Обработать строку быстрого ввода прокси",
+    "description":""
+  },
+  "proxyOnTasksProtocolTitle": {
+    "message": "Протокол прокси",
+    "description":""
+  },
+  "proxyOnTasksServerTitle": {
+    "message": "Сервер прокси",
+    "description":""
+  },
+  "proxyOnTasksPortTitle": {
+    "message": "Порт прокси",
+    "description":""
+  },
+  "proxyOnTasksLoginTitle": {
+    "message": "Логин прокси",
+    "description":""
+  },
+  "proxyOnTasksPasswordTitle": {
+    "message": "Пароль прокси",
+    "description":""
+  },
+  "advancedSettingsButtonValue": {
+    "message": "Дополнительные настройки",
+    "description":""
+  },
+  "advancedSettingsButtonTitle": {
+    "message": "Показать/спрятать дополнительные настройки",
+    "description":""
+  },
+  "playSoundsTitle": {
+    "message": "Включить/выключить звуковой режим",
+    "description":""
+  },
+  "playSounds": {
+    "message": "Проигрывать звуки",
+    "description":""
+  },
+  "playSoundsInfo": {
+    "message": "Плагин проигрывает звуки, когда найдена капча, а так же в процессе ее решения и в случае успеха или ошибки.",
+    "description":""
+  },
+  "delayOnreadyCallbackTitle": {
+    "message": "Вызывать onReady метода капчи только когда капча уже решена",
+    "description":""
+  },
+  "delayOnreadyCallback": {
+    "message": "Задержка вызова onReady метода у Geetest",
+    "description":""
+  },
+  "delayOnreadyCallbackInfo": {
+    "message": "Полезно для случаев, когда целевой сайт дает небольшой промежуток времени на решение капчи, например, на rollercoin.com. <br/> Если галочка включена, то капча будет решена до того, как целевой сайт узнает о том, что ее виджет была проинициирован, так что отсчет времени не стартанет. <br/> На данный момент работает только для Geetest капчи.",
+    "description":""
+  },
+  "saveButtonValue": {
+    "message": "Применить",
+    "description":""
+  },
+  "saveButtonTitle": {
+    "message": "Применить ключ AntiCaptcha",
+    "description":""
+  },
+  "statusMessageTitle": {
+    "message": "Текущий статус",
+    "description":""
+  },
+  "errorMessageTitle": {
+    "message": "Сообщение об ошибке",
+    "description":""
+  },
+  "leaveFeedbackTitle": {
+    "message": "Оставить отзыв или сообщить о проблеме с расширением",
+    "description":""
+  },
+  "leaveFeedback": {
+    "message": "Форма по поддержке плагина",
+    "description":""
+  },
+  "leaveFeedbackLink": {
+    "message": "https://antcpt.com/rus/support.html",
+    "description":""
+  },
+  "anticaptchaHelpTitle": {
+    "message": "Anti-captcha.com тикет система",
+    "description":""
+  },
+  "anticaptchaHelp": {
+    "message": "Anti-captcha.com поддержка аккаунта",
+    "description":""
+  },
+  "anticaptchaHelpLink": {
+    "message": "https://anti-captcha.com/clients/help/tickets/list/all",
+    "description":""
+  },
+  "rateUsTitle": {
+    "message": "Оценить плагин",
+    "description":""
+  },
+  "rateUs": {
+    "message": "&#9733; Оценить плагин &#9733;",
+    "description":""
+  },
+  "optionsSaved": {
+    "message": "Настройка сохранены",
+    "description":""
+  },
+  "freeAttemptsLeft": {
+    "message": "Бесплатных разгадываний: <b>$captchas_count$</b>.",
+    "description": "",
+    "placeholders": {
+      "captchas_count": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "freeAttemptsLeftActionTitle": {
+    "message": "Бесплатных разгадываний: $captchas_count$",
+    "description": "",
+    "placeholders": {
+      "captchas_count": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "getAntiCaptchaKey": {
+    "message": "<br /><a href=\"https://anti-captcha.com/\" target=\"_blank\" title=\"Anti Captcha: automated captcha solving service.\">Получите Anti-Captcha.com ключ</a>.",
+    "description":""
+  },
+  "getFreeAttempts": {
+    "message": "Вы можете получить <b>$captchas_count$</b> бесплатных разгадываний, если авторизуетесь в своем аккаунте Google в браузере",
+    "description": "",
+    "placeholders": {
+      "captchas_count": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "newVersionCrxAutoupdate": {
+    "message": "Плагин автоматически обновится до последней версии.",
+    "description": ""
+  },
+  "newVersionZipDownloadLink": {
+    "message": "Новая версия $new_version$ <a target=\"_blank\" href=\"https://antcpt.com/rus/download.html\" title=\"Скачать новую версию расширения AntiCaptcha\">плагина доступна для скачивания</a>.",
+    "description": "",
+    "placeholders": {
+      "new_version": {
+        "content": "$1",
+        "example": "0.1802"
+      }
+    }
+  },
+  "newVersionWhatsNew": {
+    "message": "<br /> Что нового:",
+    "description": ""
+  },
+  "newVersionWhatsNewIndex": {
+    "message": "whats_new_rus",
+    "description": ""
+  },
+  "solvingStatusTitle": {
+    "message": "Статус решения капчи",
+    "description":""
+  },
+  "markImageTitle": {
+    "message": "Отметить картинку как содержащую капчу (CTRL+SHIFT+3)",
+    "description":""
+  },
+  "markInputTitle": {
+    "message": "Отметить поле получателем решения капчи (CTRL+SHIFT+3)",
+    "description":""
+  },
+  "unmarkImageTitle": {
+    "message": "Снять отметку картинки как капчи при нажатии",
+    "description":""
+  },
+  "unmarkInputTitle": {
+    "message": "Снять отметку с поля в качестве получателя решения капчи при нажатии",
+    "description":""
+  },
+  "agingRecaptchaTitle": {
+    "message": "Решение рекапчи устареет через %s секунд.",
+    "description":""
+  },
+  "outdatedRecaptchaTitle": {
+    "message": "Решение рекапчи устарело.",
+    "description":""
+  },
+  "refreshRecaptchaTitle": {
+    "message": "Нажмите чтобы обновить его.",
+    "description":""
+  },
+  "imageAutosearchTitle": {
+    "message": "Найти и решить картинку с капчей для данного поля ввода (CTRL+SHIFT+6)",
+    "description":""
+  },
+  "markInputSolverMessage": {
+    "message": "Отметьте поле ввода для капчи",
+    "description":""
+  }
+}
