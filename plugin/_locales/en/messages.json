@@ -1,0 +1,602 @@
+{
+  "appName": {
+    "message": "AntiCaptcha automatic captcha solver",
+    "description": "The title of the application, displayed in the web store."
+  },
+  "appDesc": {
+    "message": "This plugin allows you to automatically solve CAPTCHAs found on any webpage.",
+    "description":"The description of the application, displayed in the web store."
+  },
+  "appShortName": {
+    "message": "AntiCaptcha",
+    "description": ""
+  },
+  "anticaptchaLogoAlt": {
+    "message": "AntiCaptcha solver Options",
+    "description":""
+  },
+  "balanceTitle": {
+    "message": "Your balance",
+    "description":""
+  },
+  "newVersionMessageTitle": {
+    "message": "New plugin version available",
+    "description":""
+  },
+  "enablePluginTitle": {
+    "message": "Enable/Disable AntiCaptcha plugin",
+    "description":""
+  },
+  "enablePlugin": {
+    "message": "Enable AntiCaptcha plugin",
+    "description":""
+  },
+  "mainTabButtonTitle": {
+    "message": "Switch to a Main tab",
+    "description":""
+  },
+  "mainTabButton": {
+    "message": "Main",
+    "description":""
+  },
+  "whatSolveTabButtonTitle": {
+    "message": "Switch to What to solve tab",
+    "description":""
+  },
+  "whatSolveButton": {
+    "message": "What to solve",
+    "description":""
+  },
+  "recaptchaTabButtonTitle": {
+    "message": "Switch to a Recaptcha advanced tab",
+    "description":""
+  },
+  "recaptchaTabButton": {
+    "message": "Recaptcha advanced",
+    "description":""
+  },
+  "advancedTabButtonTitle": {
+    "message": "Switch to Advanced tab",
+    "description":""
+  },
+  "advancedButton": {
+    "message": "Advanced",
+    "description":""
+  },
+  "accountKeyTitle": {
+    "message": "Enter your <a href=\"https://anti-captcha.com/\" target=\"_blank\" title=\"Anti Captcha: automated captcha solving service.\">Anti-Captcha.com</a> account key.",
+    "description":""
+  },
+  "accountKeyTitleTitle": {
+    "message": "Enter your Anti-Captcha.com account key here",
+    "description":""
+  },
+  "accountKeyTitlePlaceholder": {
+    "message": "Anti-Captcha.com account key",
+    "description":""
+  },
+  "iconLockAlt": {
+    "message": "Key icon",
+    "description":""
+  },
+  "noAccountKeyTitle": {
+    "message": "Click to see the note",
+    "description":""
+  },
+  "noAccountKey": {
+    "message": "Why do I need the key?",
+    "description":""
+  },
+  "noAccountKeyInfo": {
+    "message": "This plugin requires a special key to get the job done. <br /> You need to register on <a href=\"https://anti-captcha.com/\" target=\"_blank\" title=\"Anti Captcha: automated captcha solving service.\">Anti-Captcha.com</a>. <br /> Then add funds and place here the key you can find in <a href=\"https://anti-captcha.com/clients/settings/apisetup\" target=\"_blank\" title=\"Goto API setup section of anti-captcha.com\">\"Settings\" -> \"API setup\" section of the website</a>.",
+    "description":""
+  },
+  "noAccountKeyCloseTitle": {
+    "message": "Close the \"Why do I need the key\" window",
+    "description":""
+  },
+  "autoSubmitFormTitle": {
+    "message": "Auto submit FORM after solving",
+    "description":""
+  },
+  "autoSubmitForm": {
+    "message": "Auto submit FORM after solving",
+    "description":""
+  },
+  "autoSubmitFormInfo": {
+    "message": "Sends captcha solution to the target website for verification when it's solved.<br /> This functional may work incorrect on certain websites. Uncheck it if a webpage reloads after solving.",
+    "description":""
+  },
+  "useRecaptchaAcceleratorTitle": {
+    "message": "Enable / disable reCAPTCHA 2 accelerator feature",
+    "description":""
+  },
+  "useRecaptchaAccelerator": {
+    "message": "Use Recaptcha accelerator",
+    "description":""
+  },
+  "useRecaptchaAcceleratorInfo": {
+    "message": "This feature allows you to let us solve the Recaptcha2 faster by providing minor HTML data that surrounds a Recaptcha block. <br /> By using this HTML data (on an anti-captcha.com side) we can fool a Recaptcha2 so it thinks that it's being solved on an actual web site. <br /> No important data is sent, no input values, not a complete HTML. Only cropped code that includes .g-recaptcha element subtree. <br /> For example: <i> &lt;body&gt;&lt;main class='main'&gt;&lt;form action='/sendForm'&gt;&lt;input type='text' name='somename'&gt;&lt;div class='g-recaptcha'&gt;&lt;/div&gt;&lt;/form&gt;&lt;/main&gt;&lt;/body&gt;</i> <br /> All the attributes except id, class, role, type, name, method, action are stripped. <br /> Please be patient, we are still working on this features but we belive it's gonna save you time and so money!",
+    "description":""
+  },
+  "recaptchaPrecachingLegend": {
+    "message": "Recaptcha precaching feature",
+    "description":""
+  },
+  "useRecaptchaPrecachingTitle": {
+    "message": "Enable / disable reCAPTCHA 2 precaching feature",
+    "description":""
+  },
+  "useRecaptchaPrecaching": {
+    "message": "Use Recaptcha precaching",
+    "description":""
+  },
+  "useRecaptchaPrecachingInfo": {
+    "message": "New feature allows you to reduce Recaptcha solving time twice or even more, depending on your usage regime. <a href='' target='_blank' id='recaptcha_precache_debug_link'>Recaptcha precache debug page</a>",
+    "description":""
+  },
+  "precachingKNumber": {
+    "message": "K-number (precachedSolutionsCountK) min and max",
+    "description":""
+  },
+  "precachingKNumberInfo": {
+    "message": "The number of extra not occupied tasks for precaching. Automatic algorithm adjusts the number between min and max for a better performance and less spending. Recommended: Min=2, Max=4.",
+    "description":""
+  },
+  "precachingKNumberMinTitle": {
+    "message": "Please specify the min value of K-number range",
+    "description":""
+  },
+  "precachingKNumberMaxTitle": {
+    "message": "Please specify the max value of K-number range",
+    "description":""
+  },
+  "solveRecaptcha2Title": {
+    "message": "Turn On/Off reCAPTCHA 2 automatic solving",
+    "description":""
+  },
+  "solveRecaptcha2": {
+    "message": "Solve reCAPTCHA 2 (I'm not a robot) automatically",
+    "description":""
+  },
+  "solveRecaptcha2Info": {
+    "message": "You may turn off this option if you don't need a reCAPTCHA 2 being solved when it's found on a web page. Regular image CAPTCHA will work as usual.",
+    "description":""
+  },
+  "solveRecaptcha3Title": {
+    "message": "Turn On/Off reCAPTCHA 3 automatic solving",
+    "description":""
+  },
+  "solveRecaptcha3": {
+    "message": "Solve reCAPTCHA 3 automatically",
+    "description":""
+  },
+  "solveRecaptcha3Info": {
+    "message": "Turn off this option if you don't want to solve new reCAPTCHA 3.",
+    "description":""
+  },
+  "recaptcha3DesiredScore": {
+    "message": "Desired score:",
+    "description":""
+  },
+  "recaptcha3DesiredScoreTitle": {
+    "message": "Please enter the Recaptcha 3 score you would like to have",
+    "description":""
+  },
+  "solveInvisibleRecaptcha2Title": {
+    "message": "Turn On/Off invisibile reCAPTCHA automatic solving",
+    "description":""
+  },
+  "solveInvisibleRecaptcha2": {
+    "message": "Solve an invisibile reCAPTCHA automatically",
+    "description":""
+  },
+  "solveInvisibleRecaptcha2Info": {
+    "message": "Solve a reCAPTCHA that looks like a small badge that's usually in a right bottom corner of the web page.",
+    "description":""
+  },
+  "dontReuseRecaptchaSolutionTitle": {
+    "message": "Turn Off/On previous reCAPTCHA 2 solution reusage",
+    "description":""
+  },
+  "dontReuseRecaptchaSolution": {
+    "message": "Don't reuse previous reCAPTCHA 2 solution on the same page",
+    "description":""
+  },
+  "dontReuseRecaptchaSolutionInfo": {
+    "message": "A new recaptcha solving process will start for a newly appeared recaptcha box even if there is another reCAPTCHA 2 recently solved (and not yet expired) on this web-page. If off then new solving process will start only after previous solution (on the same web-page) expires.",
+    "description":""
+  },
+  "solveFuncaptchaTitle": {
+    "message": "Turn On/Off Funcaptcha automatic solving",
+    "description":""
+  },
+  "whereSolveWhiteList": {
+    "message": "Where to solve captchas domain list",
+    "description":""
+  },
+  "whereSolveBlackList": {
+    "message": "Where NOT to solve captchas domain list",
+    "description":""
+  },
+  "whereSolveList": {
+    "message": "Where to solve/not to solve domains list",
+    "description":""
+  },
+  "whereSolveHostnameTitle": {
+    "message": "Enter the domain you want to add to the list",
+    "description":""
+  },
+  "whereSolveAddHostname": {
+    "message": "Add/delete domain to/from the list",
+    "description":""
+  },
+  "whereSolveActLike": {
+    "message": "Act like &nbsp;",
+    "description":""
+  },
+  "whereSolveActLikeWhiteList": {
+    "message": "&nbsp;White list",
+    "description":""
+  },
+  "whereSolveActLikeWhiteListTitle": {
+    "message": "Solve on listed domains only",
+    "description":""
+  },
+  "whereSolveActLikeBlackList": {
+    "message": "&nbsp;Black list",
+    "description":""
+  },
+  "whereSolveActLikeBlackListTitle": {
+    "message": "Omit solving on listed domains",
+    "description":""
+  },
+  "whereSolveAttention": {
+    "message": "Attention: White list is empty, no captcha will be solved on any domain.",
+    "description":""
+  },
+  "solveFuncaptcha": {
+    "message": "Solve Funcaptcha automatically",
+    "description":""
+  },
+  "solveFuncaptchaInfo": {
+    "message": "Turn on if you want Funcaptcha being automatically solved.",
+    "description":""
+  },
+  "solveGeetestTitle": {
+    "message": "Turn On/Off Geetest automatic solving",
+    "description":""
+  },
+  "solveGeetest": {
+    "message": "Solve Geetest automatically",
+    "description":""
+  },
+  "solveGeetestInfo": {
+    "message": "Turn on if you want Geetest being automatically solved.",
+    "description":""
+  },
+  "solveHcaptchaTitle": {
+    "message": "Turn On/Off hCaptcha automatic solving",
+    "description":""
+  },
+  "solveHcaptcha": {
+    "message": "Solve hCaptcha automatically",
+    "description":""
+  },
+  "solveHcaptchaInfo": {
+    "message": "Turn on if you want hCaptcha being automatically solved.",
+    "description":""
+  },
+  "hcaptchaAdvancedLegend": {
+    "message": "Hcaptcha advanced settings",
+    "description":""
+  },
+  "setIncomingWorkersUserAgentTitle": {
+    "message": "Turn On/Off incoming worker's User-Agent setting",
+    "description":""
+  },
+  "setIncomingWorkersUserAgent": {
+    "message": "Set incoming worker's User-Agent",
+    "description":""
+  },
+  "setIncomingWorkersUserAgentInfo": {
+    "message": "For certain types of captchas (hCaptcha e.g.) with a solution itself we also got a User-Agent of the worker. If option is ON then we replace your browser's User-Agent with that value for a short period of time (110 sec) and for a current tab only. So your browser matches the browser where captcha was initially solved. This improves successful captcha solving ratio.",
+    "description":""
+  },
+  "runExplicitInvisibleHcaptchaCallbackWhenChallengeShownTitle": {
+    "message": "Turn On/Off callback running when a challenge box is shown mode for explicit invisible Hcaptcha",
+    "description":""
+  },
+  "runExplicitInvisibleHcaptchaCallbackWhenChallengeShown": {
+    "message": "Run explicit invisible Hcaptcha callback only when the challenge is shown",
+    "description":""
+  },
+  "runExplicitInvisibleHcaptchaCallbackWhenChallengeShownInfo": {
+    "message": "An invisible Hcaptcha will be considered as solved only when the corresponding button is pressed or Hcaptcha execute method called. In this case only when the challenge box is shown the target website callback will be executed. <br /> <span class='important'> It's a new behavior for plugin. So if you are facing some issues with Invisible Hcaptcha, try to disable this checkbox.</span>",
+    "description":""
+  },
+  "startRecaptcha2SolvingWhenChallengeShownTitle": {
+    "message": "Turn On/Off solving when a challenge box is shown mode",
+    "description":""
+  },
+  "startRecaptcha2SolvingWhenChallengeShown": {
+    "message": "Start reCAPTCHA 2 solving only when a challenge box is shown",
+    "description":""
+  },
+  "startRecaptcha2SolvingWhenChallengeShownInfo": {
+    "message": "A solving process will start only when a reCAPTCHA challenge box with images and stuff is shown. Useful for invisible reCAPTCHA 2: gonna save you some money and will prevent unnecessary callbacks.",
+    "description":""
+  },
+  "solveOnlyPresentedRecaptcha2Title": {
+    "message": "Do not solve hidden on a web-page reCAPTCHA 2",
+    "description":""
+  },
+  "solveOnlyPresentedRecaptcha2": {
+    "message": "Solve only presented (not hidden) on a web-page reCAPTCHA 2",
+    "description":""
+  },
+  "solveOnlyPresentedRecaptcha2Info": {
+    "message": "If it's ON it will only solve a reCAPTCHA 2 that is actually visible on a web-page. A reCAPTCHA 2 located in an invisible or hidden container won't be solved.",
+    "description":""
+  },
+  "usePredefinedImageCaptchaMarksTitle": {
+    "message": "Turn On/Off automatic image CAPTCHA selection and solution",
+    "description":""
+  },
+  "usePredefinedImageCaptchaMarks": {
+    "message": "Use predefined regular image CAPTCHA marks",
+    "description":""
+  },
+  "usePredefinedImageCaptchaMarksInfo": {
+    "message": "Regular image CAPTCHA will be automatically found, marked and solved on every web page. It's based on selection of other users, but all your local marks will have priority anyway.",
+    "description":""
+  },
+  "reenableContextmenuTitle": {
+    "message": "Force browser to show context menu",
+    "description":""
+  },
+  "reenableContextmenu": {
+    "message": "Re-enable context menu",
+    "description":""
+  },
+  "reenableContextmenuInfo": {
+    "message": "Check if target website disables context menu and you can't mark image and input as CAPTCHA. This feature affects websites which use their own context menu and/or block original.",
+    "description":""
+  },
+  "proxyOnTasksLegend": {
+    "message": "ProxyOn settings",
+    "description":""
+  },
+  "proxyOnTasksTitle": {
+    "message": "Make all the tasks ProxyOn",
+    "description":""
+  },
+  "proxyOnTasks": {
+    "message": "Solve ProxyOn tasks",
+    "description":""
+  },
+  "proxyOnTasksInfo": {
+    "message": "All the captcha tasks (except regular image captchas) will be solved through the proxy you set up below as ProxyOn. <br> This might be required if the target website checks the solver IP address. In that case this proxy will be sent together with a ProxyOn task to the anti-captcha.com. Also you need to use this proxy in an extension like <b>Proxy SwitchyOmega</b>, so your browser IP address and the solver IP address matches.",
+    "description":""
+  },
+  "proxyOnTasksQuickAdd": {
+    "message": "Quick add",
+    "description":""
+  },
+  "proxyOnTasksNormalView": {
+    "message": "Normal view",
+    "description":""
+  },
+  "proxyOnTasksQuickAddSwitchTitle": {
+    "message": "Switch between quick and normal proxy adding modes",
+    "description":""
+  },
+  "proxyOnTasksQuickAddInputTitle": {
+    "message": "Enter proxy settings line according to the input mask",
+    "description":""
+  },
+  "proxyOnTasksQuickAddButtonTitle": {
+    "message": "Process entered proxy line",
+    "description":""
+  },
+  "proxyOnTasksProtocolTitle": {
+    "message": "Proxy Protocol",
+    "description":""
+  },
+  "proxyOnTasksServerTitle": {
+    "message": "Proxy Server",
+    "description":""
+  },
+  "proxyOnTasksPortTitle": {
+    "message": "Proxy Port",
+    "description":""
+  },
+  "proxyOnTasksLoginTitle": {
+    "message": "Proxy Login",
+    "description":""
+  },
+  "proxyOnTasksPasswordTitle": {
+    "message": "Proxy Password",
+    "description":""
+  },
+  "advancedSettingsButtonValue": {
+    "message": "Advanced settings",
+    "description":""
+  },
+  "advancedSettingsButtonTitle": {
+    "message": "Show/Hide advanced options",
+    "description":""
+  },
+  "playSoundsTitle": {
+    "message": "Turn on/off sound mode",
+    "description":""
+  },
+  "playSounds": {
+    "message": "Play sounds",
+    "description":""
+  },
+  "playSoundsInfo": {
+    "message": "The Plugin plays sound when CAPTCHA found, while solving process and in case of success or error.",
+    "description":""
+  },
+  "delayOnreadyCallbackTitle": {
+    "message": "Call a captcha onReady callback only when it's already solved",
+    "description":""
+  },
+  "delayOnreadyCallback": {
+    "message": "Delay Geetest onReady callback",
+    "description":""
+  },
+  "delayOnreadyCallbackInfo": {
+    "message": "Useful for cases when target website gives only a small time gap to solve captcha, i.e. on rollercoin.com. <br/> If this checkbox is on then captcha being solved before target website knows that it was initiated, so its timer do not start. <br/> Works only for Geetest captcha at the moment.",
+    "description":""
+  },
+  "saveButtonValue": {
+    "message": "Apply",
+    "description":""
+  },
+  "saveButtonTitle": {
+    "message": "Apply AntiCaptcha key",
+    "description":""
+  },
+  "statusMessageTitle": {
+    "message": "Current status",
+    "description":""
+  },
+  "errorMessageTitle": {
+    "message": "Error message",
+    "description":""
+  },
+  "leaveFeedbackTitle": {
+    "message": "Leave feedback or report a problem about our extension",
+    "description":""
+  },
+  "leaveFeedback": {
+    "message": "A plugin feedback support",
+    "description":""
+  },
+  "leaveFeedbackLink": {
+    "message": "https://antcpt.com/eng/support.html",
+    "description":""
+  },
+  "anticaptchaHelpTitle": {
+    "message": "Anti-captha.com ticket system",
+    "description":""
+  },
+  "anticaptchaHelp": {
+    "message": "Anti-captcha.com account support",
+    "description":""
+  },
+  "anticaptchaHelpLink": {
+    "message": "https://anti-captcha.com/clients/help/tickets/list/all",
+    "description":""
+  },
+  "rateUsTitle": {
+    "message": "Rate us",
+    "description":""
+  },
+  "rateUs": {
+    "message": "&#9733; Rate us &#9733;",
+    "description":""
+  },
+  "optionsSaved": {
+    "message": "Options saved",
+    "description":""
+  },
+  "freeAttemptsLeft": {
+    "message": "You have <b>$captchas_count$</b> free captchas left!",
+    "description": "",
+    "placeholders": {
+      "captchas_count": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "freeAttemptsLeftActionTitle": {
+    "message": "You have $captchas_count$ free captchas",
+    "description": "",
+    "placeholders": {
+      "captchas_count": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "getAntiCaptchaKey": {
+    "message": "<br /><a href=\"https://anti-captcha.com/\" target=\"_blank\" title=\"Anti Captcha: automated captcha solving service.\">Get Anti-Captcha.com key</a>.",
+    "description":""
+  },
+  "getFreeAttempts": {
+    "message": "You can get <b>$captchas_count$</b> free captchas if you authorise in your Google account in this browser",
+    "description": "",
+    "placeholders": {
+      "captchas_count": {
+        "content": "$1",
+        "example": ""
+      }
+    }
+  },
+  "newVersionCrxAutoupdate": {
+    "message": "Plugin will be automatically updated to the newest version.",
+    "description": ""
+  },
+  "newVersionZipDownloadLink": {
+    "message": "New version $new_version$ of <a target=\"_blank\" href=\"https://antcpt.com/eng/download.html\" title=\"Download new version of the AntiCaptcha extension\">the plug-in available for downloading</a>.",
+    "description": "",
+    "placeholders": {
+      "new_version": {
+        "content": "$1",
+        "example": "0.1802"
+      }
+    }
+  },
+  "newVersionWhatsNew": {
+    "message": "<br /> What's new:",
+    "description": ""
+  },
+  "newVersionWhatsNewIndex": {
+    "message": "whats_new_eng",
+    "description": ""
+  },
+  "solvingStatusTitle": {
+    "message": "Captcha solving status",
+    "description":""
+  },
+  "markImageTitle": {
+    "message": "Mark image as captcha source (CTRL+SHIFT+3)",
+    "description":""
+  },
+  "markInputTitle": {
+    "message": "Mark input as captcha solution destination (CTRL+SHIFT+3)",
+    "description":""
+  },
+  "unmarkImageTitle": {
+    "message": "Unmark image as captcha source when you press here",
+    "description":""
+  },
+  "unmarkInputTitle": {
+    "message": "Unmark input as captcha solution destination when you press here",
+    "description":""
+  },
+  "agingRecaptchaTitle": {
+    "message": "Captcha solution will be expired in %s seconds.",
+    "description":""
+  },
+  "outdatedRecaptchaTitle": {
+    "message": "Captcha solution expired.",
+    "description":""
+  },
+  "refreshRecaptchaTitle": {
+    "message": "Press here to refresh it.",
+    "description":""
+  },
+  "imageAutosearchTitle": {
+    "message": "Find and solve CAPTCHA image for this input (CTRL+SHIFT+6)",
+    "description":""
+  },
+  "markInputSolverMessage": {
+    "message": "Please mark captcha input field",
+    "description":""
+  }
+}
